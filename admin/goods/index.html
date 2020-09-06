@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>商品 - Mall Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Mall Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../user/user/" class="dropdown-item">Main</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Mall <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../mall/" class="dropdown-item">首页</a>
+</li>
+                                    
+<li>
+    <a href="../../mall/coupon/" class="dropdown-item">优惠券</a>
+</li>
+                                    
+<li>
+    <a href="../../mall/goods/" class="dropdown-item">产品</a>
+</li>
+                                    
+<li>
+    <a href="../../mall/search/" class="dropdown-item">搜索</a>
+</li>
+                                    
+<li>
+    <a href="../../mall/cart/" class="dropdown-item">购物车</a>
+</li>
+                                    
+<li>
+    <a href="../../mall/address/" class="dropdown-item">地址</a>
+</li>
+                                    
+<li>
+    <a href="../../mall/activity/" class="dropdown-item">活动</a>
+</li>
+                                    
+<li>
+    <a href="../../mall/order/" class="dropdown-item">订单</a>
+</li>
+                                    
+<li>
+    <a href="../../mall/my/" class="dropdown-item">个人中心</a>
+</li>
+                                    
+<li>
+    <a href="../../mall/collect/" class="dropdown-item">收藏</a>
+</li>
+                                    
+<li>
+    <a href="../../mall/aftersale/" class="dropdown-item">售后</a>
+</li>
+                                    
+<li>
+    <a href="../../mall/vip/" class="dropdown-item">会员</a>
+</li>
+                                    
+<li>
+    <a href="../../mall/charge/" class="dropdown-item">充值</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">管理后台 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../user/" class="dropdown-item">用户</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">商品</a>
+</li>
+                                    
+<li>
+    <a href="../ad/" class="dropdown-item">推广</a>
+</li>
+                                    
+<li>
+    <a href="../topic/" class="dropdown-item">活动</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../user/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../ad/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">商品管理</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">修订记录</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">背景</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">产品说明</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">关键流程说明</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">接口说明</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">商品管理</h1>
+<div class="toc">
+<ul>
+<li><a href="#_1">商品管理</a><ul>
+<li><a href="#_2">修订记录</a></li>
+<li><a href="#_3">背景</a></li>
+<li><a href="#_4">产品说明</a></li>
+<li><a href="#_5">关键流程说明</a></li>
+<li><a href="#_6">接口说明</a><ul>
+<li><a href="#10">1.0 创建商品</a><ul>
+<li><a href="#_7">接口说明</a></li>
+<li><a href="#_8">请求说明</a></li>
+<li><a href="#_9">输入参数</a></li>
+<li><a href="#_10">错误说明</a></li>
+<li><a href="#_11">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#10_1">1.0 更新商品</a><ul>
+<li><a href="#_12">接口说明</a></li>
+<li><a href="#_13">请求说明</a></li>
+<li><a href="#_14">输入参数</a></li>
+<li><a href="#_15">错误说明</a></li>
+<li><a href="#_16">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#11">1.1 更新商品</a><ul>
+<li><a href="#_17">接口说明</a></li>
+<li><a href="#_18">请求说明</a></li>
+<li><a href="#_19">输入参数</a></li>
+<li><a href="#_20">错误说明</a></li>
+<li><a href="#_21">返回实例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="_2">修订记录</h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th>日期</th>
+<th>作者</th>
+<th>修订类型</th>
+<th>修订内容</th>
+<th>版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2020年07月03日</td>
+<td>冷立纲</td>
+<td>A</td>
+<td>新增设计方案</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>【修订类型：A-新增  M-修改 D-删除】</p>
+</blockquote>
+<h2 id="_3">背景</h2>
+<p>后台商品管理相关接口</p>
+<h2 id="_4">产品说明</h2>
+<h2 id="_5">关键流程说明</h2>
+<h2 id="_6">接口说明</h2>
+<h4 id="10">1.0 创建商品</h4>
+<h5 id="_7">接口说明</h5>
+<p>管理中心用户列表</p>
+<h5 id="_8">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/admin/goods/update</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_9">输入参数</h5>
+<pre><code class="json">
+{
+  &quot;attributes&quot;: [   //商品参数
+    {
+      &quot;attribute&quot;: &quot;string&quot;,  //属性名
+      &quot;deleted&quot;: true, 是否删除
+      &quot;goodsId&quot;: 0, //产品ID
+      &quot;id&quot;: 0, //参数ID
+      &quot;value&quot;: &quot;string&quot; //参数值
+    }
+  ],
+  &quot;goods&quot;: {
+    &quot;brandId&quot;: 0,  //品牌
+    &quot;brief&quot;: &quot;string&quot;, // 商品简介
+    &quot;categoryId&quot;: 0,  //商品分类
+    &quot;counterPrice&quot;: 0, // 标价
+    &quot;retailPrice&quot;: 0, // 售价（非必填，最终值为所有货品价格里的最低价格，若货品价格未填写，则货品价格同步售价）
+    &quot;vipPrice&quot;: 0,  //会员价（对应最低售价对应的会员价，若货品价格未填写，则货品价格同步该会员价）
+    &quot;deleted&quot;: true,  //是否删除
+    &quot;detail&quot;: [  //详情图片列表
+      {
+        &quot;size&quot;: &quot;string&quot;,  //图片尺寸（x*y） 宽*高
+        &quot;url&quot;: &quot;string&quot;  // 图片下载地址
+      }
+    ],
+    &quot;gallery&quot;: [  //商品宣传图片列表，采用JSON数组格式
+      &quot;string&quot;  //图片下载地址
+    ],
+    &quot;goodsSn&quot;: &quot;string&quot;,  //商品SN编码
+    &quot;id&quot;: 0, //商品ID
+    &quot;isHot&quot;: true, //是否热门
+    &quot;isNew&quot;: true, //是否新品
+    &quot;isOnSale&quot;: true, //是否在售
+    &quot;keywords&quot;: &quot;string&quot;, //关键词,逗号分隔
+    &quot;name&quot;: &quot;string&quot;, //商品名称
+    &quot;picUrl&quot;: &quot;string&quot;, //商品页面商品图片
+
+    &quot;shareUrl&quot;: &quot;string&quot;, //商品分享海报
+    &quot;sortOrder&quot;: 0, //排序字断
+    &quot;tags&quot;: [  //标签
+      {
+        &quot;name&quot;: &quot;string&quot;,
+        &quot;type&quot;: 0,
+        &quot;url&quot;: &quot;string&quot;
+      }
+    ],
+    &quot;testReports&quot;: [  //测试报告
+      {
+        &quot;size&quot;: &quot;string&quot;, //图片尺寸
+        &quot;url&quot;: &quot;string&quot; // 图片下载地址
+      }
+    ],
+    &quot;unit&quot;: &quot;string&quot;, //单位
+    &quot;videos&quot;: [   //视频
+      {
+        &quot;cover&quot;: &quot;string&quot;,  //封面
+        &quot;size&quot;: &quot;string&quot;,  //宽*高
+        &quot;url&quot;: &quot;string&quot; //下载地址
+      }
+    ],
+  },
+  &quot;specifications&quot;: [  //商品规格
+    {
+      &quot;deleted&quot;: true,  //是否删除
+      &quot;goodsId&quot;: 0, //产品ID
+      &quot;id&quot;: 0,  //规格ID
+      &quot;picUrl&quot;: &quot;string&quot;, //规格图片
+      &quot;specification&quot;: &quot;string&quot;, //规格名
+      &quot;value&quot;: &quot;string&quot; //规格值
+    }
+  ],
+  &quot;products&quot;: [   //货品信息
+    {
+      &quot;deleted&quot;: true,   //删除
+      &quot;goodsId&quot;: 0, //产品ID
+      &quot;id&quot;: 0, //货品ID
+      &quot;number&quot;: 0,  //库存
+      &quot;counterPrice&quot;: 0, // 标价
+      &quot;price&quot;: 0, // 售价（非必填，没填，则取商品售价，若两个都未填则报参数错误）
+      &quot;vipPrice&quot;: 0,  //会员价（非必填，没填，则取商品会员价，若两个都未填则报参数错误
+      &quot;specifications&quot;: [ //规格对应值
+        &quot;string&quot;
+      ],
+      &quot;url&quot;: &quot;string&quot;   //规格对应商品图片
+    }
+  ]
+}
+
+</code></pre>
+
+<h5 id="_10">错误说明</h5>
+<h5 id="_11">返回实例</h5>
+<pre><code class="json">    {
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+    }
+}  
+</code></pre>
+
+<h4 id="10_1">1.0 更新商品</h4>
+<h5 id="_12">接口说明</h5>
+<p>管理中心用户列表</p>
+<h5 id="_13">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/admin/goods/create</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_14">输入参数</h5>
+<pre><code class="json">
+{
+  &quot;attributes&quot;: [   //商品参数
+    {
+      &quot;attribute&quot;: &quot;string&quot;,  //属性名
+      &quot;deleted&quot;: true, 是否删除
+      &quot;goodsId&quot;: 0, //产品ID
+      &quot;id&quot;: 0, //参数ID
+      &quot;value&quot;: &quot;string&quot; //参数值
+    }
+  ],
+  &quot;goods&quot;: {
+    &quot;brandId&quot;: 0,  //品牌
+    &quot;brief&quot;: &quot;string&quot;, // 商品简介
+    &quot;categoryId&quot;: 0,  //商品分类
+    &quot;counterPrice&quot;: 0, // 标价
+    &quot;retailPrice&quot;: 0, // 售价（非必填，最终值为所有货品价格里的最低价格，若货品价格未填写，则货品价格同步售价）
+    &quot;vipPrice&quot;: 0,  //会员价（对应最低售价对应的会员价，若货品价格未填写，则货品价格同步该会员价）
+    &quot;deleted&quot;: true,  //是否删除
+    &quot;detail&quot;: [  //详情图片列表
+      {
+        &quot;size&quot;: &quot;string&quot;,  //图片尺寸（x*y） 宽*高
+        &quot;url&quot;: &quot;string&quot;  // 图片下载地址
+      }
+    ],
+    &quot;gallery&quot;: [  //商品宣传图片列表，采用JSON数组格式
+      &quot;string&quot;  //图片下载地址
+    ],
+    &quot;goodsSn&quot;: &quot;string&quot;,  //商品SN编码
+    &quot;id&quot;: 0, //商品ID
+    &quot;isHot&quot;: true, //是否热门
+    &quot;isNew&quot;: true, //是否新品
+    &quot;isOnSale&quot;: true, //是否在售
+    &quot;keywords&quot;: &quot;string&quot;, //关键词,逗号分隔
+    &quot;name&quot;: &quot;string&quot;, //商品名称
+    &quot;picUrl&quot;: &quot;string&quot;, //商品页面商品图片
+
+    &quot;shareUrl&quot;: &quot;string&quot;, //商品分享海报
+    &quot;sortOrder&quot;: 0, //排序字断
+    &quot;tags&quot;: [  //标签
+      {
+        &quot;name&quot;: &quot;string&quot;,
+        &quot;type&quot;: 0,
+        &quot;url&quot;: &quot;string&quot;
+      }
+    ],
+    &quot;testReports&quot;: [  //测试报告
+      {
+        &quot;size&quot;: &quot;string&quot;, //图片尺寸
+        &quot;url&quot;: &quot;string&quot; // 图片下载地址
+      }
+    ],
+    &quot;unit&quot;: &quot;string&quot;, //单位
+    &quot;videos&quot;: [   //视频
+      {
+        &quot;cover&quot;: &quot;string&quot;,  //封面
+        &quot;size&quot;: &quot;string&quot;,  //宽*高
+        &quot;url&quot;: &quot;string&quot; //下载地址
+      }
+    ],
+  },
+  &quot;specifications&quot;: [  //商品规格
+    {
+      &quot;deleted&quot;: true,  //是否删除
+      &quot;goodsId&quot;: 0, //产品ID
+      &quot;id&quot;: 0,  //规格ID
+      &quot;picUrl&quot;: &quot;string&quot;, //规格图片
+      &quot;specification&quot;: &quot;string&quot;, //规格名
+      &quot;value&quot;: &quot;string&quot; //规格值
+    }
+  ],
+  &quot;products&quot;: [   //货品信息
+    {
+      &quot;deleted&quot;: true,   //删除
+      &quot;goodsId&quot;: 0, //产品ID
+      &quot;id&quot;: 0, //货品ID
+      &quot;number&quot;: 0,  //库存
+      &quot;counterPrice&quot;: 0, // 标价
+      &quot;price&quot;: 0, // 售价（非必填，没填，则取商品售价，若两个都未填则报参数错误）
+      &quot;vipPrice&quot;: 0,  //会员价（非必填，没填，则取商品会员价，若两个都未填则报参数错误
+      &quot;specifications&quot;: [ //规格对应值
+        &quot;string&quot;
+      ],
+      &quot;url&quot;: &quot;string&quot;   //规格对应商品图片
+    }
+  ]
+}
+
+</code></pre>
+
+<h5 id="_15">错误说明</h5>
+<h5 id="_16">返回实例</h5>
+<pre><code class="json">    {
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+    }
+}  
+</code></pre>
+
+<h4 id="11">1.1 更新商品</h4>
+<h5 id="_17">接口说明</h5>
+<pre><code> * 编辑商品
+ * &lt;p&gt;
+ * NOTE： 由于商品涉及到四个表，特别是litemall_goods_product表依赖litemall_goods_specification表，
+ * 这导致允许所有字段都是可编辑会带来一些问题，因此这里商品编辑功能是受限制： （1）litemall_goods表可以编辑字段；
+ * （2）litemall_goods_specification表只能编辑pic_url字段，其他操作不支持；
+ * （3）litemall_goods_product表只能编辑price, number和url字段，其他操作不支持；
+ * （4）litemall_goods_attribute表支持编辑、添加和删除操作。
+ * &lt;p&gt;
+ * NOTE2: 前后端这里使用了一个小技巧： 如果前端传来的update_time字段是空，则说明前端已经更新了某个记录，则这个记录会更新；
+ * 否则说明这个记录没有编辑过，无需更新该记录。
+ * &lt;p&gt;
+ * NOTE3: （1）购物车缓存了一些商品信息，因此需要及时更新。 目前这些字段是goods_sn, goods_name, price, pic_url。
+ * （2）但是订单里面的商品信息则是不会更新。 如果订单是未支付订单，此时仍然以旧的价格支付。
+</code></pre>
+<h5 id="_18">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/admin/goods/update</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_19">输入参数</h5>
+<pre><code class="json">
+{
+  &quot;attributes&quot;: [   //商品参数
+    {
+      &quot;attribute&quot;: &quot;string&quot;,  //属性名
+      &quot;deleted&quot;: true, 是否删除
+      &quot;goodsId&quot;: 0, //产品ID
+      &quot;id&quot;: 0, //参数ID
+      &quot;value&quot;: &quot;string&quot; //参数值
+    }
+  ],
+  &quot;goods&quot;: {
+    &quot;brandId&quot;: 0,  //品牌
+    &quot;brief&quot;: &quot;string&quot;, // 商品简介
+    &quot;categoryId&quot;: 0,  //商品分类
+    &quot;counterPrice&quot;: 0, // 标价
+    &quot;retailPrice&quot;: 0, // 售价（非必填，最终值为所有货品价格里的最低价格，若货品价格未填写，则货品价格同步售价）
+    &quot;vipPrice&quot;: 0,  //会员价（对应最低售价对应的会员价，若货品价格未填写，则货品价格同步该会员价）
+    &quot;deleted&quot;: true,  //是否删除
+    &quot;detail&quot;: [  //详情图片列表
+      {
+        &quot;size&quot;: &quot;string&quot;,  //图片尺寸（x*y） 宽*高
+        &quot;url&quot;: &quot;string&quot;  // 图片下载地址
+      }
+    ],
+    &quot;gallery&quot;: [  //商品宣传图片列表，采用JSON数组格式
+      &quot;string&quot;  //图片下载地址
+    ],
+    &quot;goodsSn&quot;: &quot;string&quot;,  //商品SN编码
+    &quot;id&quot;: 0, //商品ID
+    &quot;isHot&quot;: true, //是否热门
+    &quot;isNew&quot;: true, //是否新品
+    &quot;isOnSale&quot;: true, //是否在售
+    &quot;keywords&quot;: &quot;string&quot;, //关键词,逗号分隔
+    &quot;name&quot;: &quot;string&quot;, //商品名称
+    &quot;picUrl&quot;: &quot;string&quot;, //商品页面商品图片
+
+    &quot;shareUrl&quot;: &quot;string&quot;, //商品分享海报
+    &quot;sortOrder&quot;: 0, //排序字断
+    &quot;tags&quot;: [  //标签
+      {
+        &quot;name&quot;: &quot;string&quot;,
+        &quot;type&quot;: 0,
+        &quot;url&quot;: &quot;string&quot;
+      }
+    ],
+    &quot;testReports&quot;: [  //测试报告
+      {
+        &quot;size&quot;: &quot;string&quot;, //图片尺寸
+        &quot;url&quot;: &quot;string&quot; // 图片下载地址
+      }
+    ],
+    &quot;unit&quot;: &quot;string&quot;, //单位
+    &quot;videos&quot;: [   //视频
+      {
+        &quot;cover&quot;: &quot;string&quot;,  //封面
+        &quot;size&quot;: &quot;string&quot;,  //宽*高
+        &quot;url&quot;: &quot;string&quot; //下载地址
+      }
+    ],
+  },
+  &quot;specifications&quot;: [  //商品规格
+    {
+      &quot;deleted&quot;: true,  //是否删除
+      &quot;goodsId&quot;: 0, //产品ID
+      &quot;id&quot;: 0,  //规格ID
+      &quot;picUrl&quot;: &quot;string&quot;, //规格图片
+      &quot;specification&quot;: &quot;string&quot;, //规格名
+      &quot;value&quot;: &quot;string&quot; //规格值
+    }
+  ],
+  &quot;products&quot;: [   //货品信息
+    {
+      &quot;deleted&quot;: true,   //删除
+      &quot;goodsId&quot;: 0, //产品ID
+      &quot;id&quot;: 0, //货品ID
+      &quot;number&quot;: 0,  //库存
+      &quot;counterPrice&quot;: 0, // 标价
+      &quot;price&quot;: 0, // 售价（非必填，没填，则取商品售价，若两个都未填则报参数错误）
+      &quot;vipPrice&quot;: 0,  //会员价（非必填，没填，则取商品会员价，若两个都未填则报参数错误
+      &quot;specifications&quot;: [ //规格对应值
+        &quot;string&quot;
+      ],
+      &quot;url&quot;: &quot;string&quot;   //规格对应商品图片
+    }
+  ]
+}
+
+</code></pre>
+
+<h5 id="_20">错误说明</h5>
+<h5 id="_21">返回实例</h5>
+<pre><code class="json">    {
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+    }
+}  
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
