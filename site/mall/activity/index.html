@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>活动 - Mall Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Mall Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../user/user/" class="dropdown-item">Main</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Mall <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">首页</a>
+</li>
+                                    
+<li>
+    <a href="../coupon/" class="dropdown-item">优惠券</a>
+</li>
+                                    
+<li>
+    <a href="../goods/" class="dropdown-item">产品</a>
+</li>
+                                    
+<li>
+    <a href="../search/" class="dropdown-item">搜索</a>
+</li>
+                                    
+<li>
+    <a href="../cart/" class="dropdown-item">购物车</a>
+</li>
+                                    
+<li>
+    <a href="../address/" class="dropdown-item">地址</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">活动</a>
+</li>
+                                    
+<li>
+    <a href="../order/" class="dropdown-item">订单</a>
+</li>
+                                    
+<li>
+    <a href="../my/" class="dropdown-item">个人中心</a>
+</li>
+                                    
+<li>
+    <a href="../collect/" class="dropdown-item">收藏</a>
+</li>
+                                    
+<li>
+    <a href="../aftersale/" class="dropdown-item">售后</a>
+</li>
+                                    
+<li>
+    <a href="../vip/" class="dropdown-item">会员</a>
+</li>
+                                    
+<li>
+    <a href="../charge/" class="dropdown-item">充值</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">管理后台 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../admin/user/" class="dropdown-item">用户</a>
+</li>
+                                    
+<li>
+    <a href="../../admin/goods/" class="dropdown-item">商品</a>
+</li>
+                                    
+<li>
+    <a href="../../admin/ad/" class="dropdown-item">推广</a>
+</li>
+                                    
+<li>
+    <a href="../../admin/topic/" class="dropdown-item">活动</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../address/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../order/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">搜索相关接口</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">修订记录</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">背景</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">产品说明</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">关键流程说明</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">接口说明</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">搜索相关接口</h1>
+<div class="toc">
+<ul>
+<li><a href="#_1">搜索相关接口</a><ul>
+<li><a href="#_2">修订记录</a></li>
+<li><a href="#_3">背景</a></li>
+<li><a href="#_4">产品说明</a></li>
+<li><a href="#_5">关键流程说明</a></li>
+<li><a href="#_6">接口说明</a><ul>
+<li><a href="#10">1.0 活动主页</a><ul>
+<li><a href="#_7">接口说明</a></li>
+<li><a href="#_8">请求说明</a></li>
+<li><a href="#_9">输入参数</a></li>
+<li><a href="#_10">错误说明</a></li>
+<li><a href="#_11">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#11">1.1 活动主题分页查询</a><ul>
+<li><a href="#_12">接口说明</a></li>
+<li><a href="#_13">请求说明</a></li>
+<li><a href="#_14">输入参数</a></li>
+<li><a href="#_15">错误说明</a></li>
+<li><a href="#_16">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#12">1.2 活动详情</a><ul>
+<li><a href="#_17">接口说明</a></li>
+<li><a href="#_18">请求说明</a></li>
+<li><a href="#_19">输入参数</a></li>
+<li><a href="#_20">错误说明</a></li>
+<li><a href="#_21">返回实例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="_2">修订记录</h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th>日期</th>
+<th>作者</th>
+<th>修订类型</th>
+<th>修订内容</th>
+<th>版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2020年07月03日</td>
+<td>冷立纲</td>
+<td>A</td>
+<td>新增设计方案</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>【修订类型：A-新增  M-修改 D-删除】</p>
+</blockquote>
+<h2 id="_3">背景</h2>
+<p>活动相关接口</p>
+<h2 id="_4">产品说明</h2>
+<h2 id="_5">关键流程说明</h2>
+<h2 id="_6">接口说明</h2>
+<h4 id="10">1.0 活动主页</h4>
+<h5 id="_7">接口说明</h5>
+<p>活动主页</p>
+<h5 id="_8">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/promotion/index</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_9">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">page</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">分页</td>
+<td align="left">默认1</td>
+</tr>
+<tr>
+<td align="left">limit</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">限制单页条数</td>
+<td align="left">默认10</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_10">错误说明</h5>
+<h5 id="_11">返回实例</h5>
+<pre><code class="json">
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;banner&quot;: [
+            {
+                &quot;id&quot;: 2, //id
+                &quot;url&quot;: &quot;http://yanxuan.nosdn.127.net/bff2e49136fcef1fd829f5036e07f116.jpg&quot;, //图片
+                &quot;link&quot;: &quot;&quot;, //跳转
+                &quot;content&quot;: &quot;活动 美食节&quot;, // 描述
+                &quot;type&quot;: 1, //跳转类型 0 h5（取link跳转）  1 产品  2 活动
+                &quot;idValue&quot;: 1110016,  // 1: 对应产品ID  2: 对应活动ID
+                &quot;extParams&quot;: null  //附加自定义参数 json 格式 
+            }
+        ],
+        &quot;topics&quot;: {  //话题
+            &quot;pageSize&quot;: 10,
+            &quot;currentPage&quot;: 1,
+            &quot;list&quot;: [
+                {
+                    &quot;goodsList&quot;: [   //产品列表
+                        {
+                            &quot;id&quot;: 1006002, //产品ID
+                            &quot;name&quot;: &quot;轻奢纯棉刺绣水洗四件套&quot;, //产品名称
+                            &quot;tags&quot;: null, //产品标签
+                            &quot;picUrl&quot;: &quot;http://yanxuan.nosdn.127.net/8ab2d3287af0cefa2cc539e40600621d.png&quot;, //产品图片
+                            &quot;unit&quot;: &quot;件&quot;, //单位
+                            &quot;counterPrice&quot;: 919.00, //专柜价
+                            &quot;retailPrice&quot;: 899.00, //销售价
+                            &quot;vipPrice&quot;: 100000.00, //会员价
+                            &quot;brief&quot;: &quot;设计师原款，精致绣花&quot;, //简介
+                            &quot;gallery&quot;: null, //图片列表
+                            &quot;videos&quot;: null //视频列表
+                        }
+                    ],
+                    &quot;title&quot;: &quot;关爱他成长的每一个足迹&quot;, //标题
+                    &quot;subtitle&quot;: &quot;专业运动品牌同厂，毛毛虫鞋买二送一&quot;, //子标题
+                    &quot;price&quot;: 0.00, //最低价
+                    &quot;readCount&quot;: &quot;6.4k&quot;, //已读数
+                    &quot;picUrl&quot;: &quot;https://yanxuan.nosdn.127.net/14943267735961674.jpg&quot;, //头图
+                    &quot;sortOrder&quot;: 1,  //排序字段
+                    &quot;addTime&quot;: &quot;2018-02-01 00:00:00&quot; //创建时间
+                }
+            ],
+            &quot;end&quot;: true,
+            &quot;startIndex&quot;: 0,
+            &quot;empty&quot;: false
+        }
+    }
+}    
+
+</code></pre>
+
+<h4 id="11">1.1 活动主题分页查询</h4>
+<h5 id="_12">接口说明</h5>
+<p>活动主题分页查询</p>
+<h5 id="_13">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/promotion/list</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_14">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">page</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">页码</td>
+<td align="left">默认第一页</td>
+</tr>
+<tr>
+<td align="left">limit</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">单页条数</td>
+<td align="left">默认10条</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_15">错误说明</h5>
+<p>无</p>
+<h5 id="_16">返回实例</h5>
+<pre><code class="json">
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;pageSize&quot;: 10,
+        &quot;currentPage&quot;: 1,
+        &quot;list&quot;: [
+            {
+                &quot;goodsList&quot;: [   //产品列表
+                    {
+                        &quot;id&quot;: 1006002, //产品ID
+                        &quot;name&quot;: &quot;轻奢纯棉刺绣水洗四件套&quot;, //产品名称
+                        &quot;tags&quot;: null, //产品标签
+                        &quot;picUrl&quot;: &quot;http://yanxuan.nosdn.127.net/8ab2d3287af0cefa2cc539e40600621d.png&quot;, //产品图片
+                        &quot;unit&quot;: &quot;件&quot;, //单位
+                        &quot;counterPrice&quot;: 919.00, //专柜价
+                        &quot;retailPrice&quot;: 899.00, //销售价
+                        &quot;vipPrice&quot;: 100000.00, //会员价
+                        &quot;brief&quot;: &quot;设计师原款，精致绣花&quot;, //简介
+                        &quot;gallery&quot;: null, //图片列表
+                        &quot;videos&quot;: null //视频列表
+                    }
+                ],
+                &quot;title&quot;: &quot;关爱他成长的每一个足迹&quot;, //标题
+                &quot;subtitle&quot;: &quot;专业运动品牌同厂，毛毛虫鞋买二送一&quot;, //子标题
+                &quot;price&quot;: 0.00, //最低价
+                &quot;readCount&quot;: &quot;6.4k&quot;, //已读数
+                &quot;picUrl&quot;: &quot;https://yanxuan.nosdn.127.net/14943267735961674.jpg&quot;, //头图
+                &quot;sortOrder&quot;: 1,  //排序字段
+                &quot;addTime&quot;: &quot;2018-02-01 00:00:00&quot; //创建时间
+            }
+        ],
+        &quot;end&quot;: true,
+        &quot;startIndex&quot;: 0,
+        &quot;empty&quot;: false
+    }
+
+}    
+
+</code></pre>
+
+<h4 id="12">1.2 活动详情</h4>
+<h5 id="_17">接口说明</h5>
+<p>根据ID查询活动详情</p>
+<h5 id="_18">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/topic/detail</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_19">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">主题ID</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_20">错误说明</h5>
+<p>无</p>
+<h5 id="_21">返回实例</h5>
+<pre><code class="json">
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;goods&quot;: [
+            {
+                &quot;id&quot;: 1006002, //产品ID
+                &quot;name&quot;: &quot;轻奢纯棉刺绣水洗四件套&quot;, //产品名称
+                &quot;tags&quot;: null, //产品标签
+                &quot;picUrl&quot;: &quot;http://yanxuan.nosdn.127.net/8ab2d3287af0cefa2cc539e40600621d.png&quot;, //产品图片
+                &quot;unit&quot;: &quot;件&quot;, //单位
+                &quot;counterPrice&quot;: 919.00, //专柜价
+                &quot;retailPrice&quot;: 899.00, //销售价
+                &quot;vipPrice&quot;: 100000.00, //会员价
+                &quot;brief&quot;: &quot;设计师原款，精致绣花&quot;, //简介
+                &quot;gallery&quot;: null, //图片列表
+                &quot;videos&quot;: null //视频列表
+            }
+        ],
+        &quot;topic&quot;: {
+            &quot;id&quot;: 264, //话题ID
+            &quot;title&quot;: &quot;设计师们推荐的应季好物&quot;,  //标题
+            &quot;subtitle&quot;: &quot;原创设计春款系列上新&quot;, //副标题
+            &quot;price&quot;: 29.90, //最低价
+            &quot;readCount&quot;: &quot;77.7k&quot;, //已读数
+            &quot;picUrl&quot;: &quot;https://yanxuan.nosdn.127.net/ 14918201901050274.jpg&quot;, //图片
+            &quot;sortOrder&quot;: 0, //排序
+            &quot;goods&quot;: [
+                1006002
+            ],
+            &quot;addTime&quot;: &quot;2018-02-01 00:00:00&quot;, //添加时间
+            &quot;updateTime&quot;: &quot;2018-02-01 00:00:00&quot;, //更新时间
+            &quot;deleted&quot;: false,
+            &quot;content&quot;: &quot;&lt;p&gt;&lt;/p&gt;&quot; //富文本内容
+        }
+    }
+}  
+
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

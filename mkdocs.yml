@@ -1,0 +1,25 @@
+  site_name: Mall Docs
+  nav:
+    - Home: 'index.md'
+    - User: 
+      - Main: './user/user.md'
+    - Mall: 
+      - 首页: './mall/index.md'    
+      - 优惠券: './mall/coupon.md'    
+      - 产品: './mall/goods.md'    
+      - 搜索: './mall/search.md'    
+      - 购物车: './mall/cart.md'
+      - 地址: './mall/address.md'    
+      - 活动: './mall/activity.md'
+      - 订单: './mall/order.md'    
+      - 个人中心: './mall/my.md'  
+      - 收藏: './mall/collect.md'  
+      - 售后: './mall/aftersale.md'  
+      - 会员: './mall/vip.md'  
+      - 充值: './mall/charge.md'  
+    - 管理后台: 
+      - 用户: './admin/user.md'    
+      - 商品: './admin/goods.md'    
+      - 推广: './admin/ad.md'    
+      - 活动: './admin/topic.md'    
+      
