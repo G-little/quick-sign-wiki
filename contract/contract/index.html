@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>合同管理 - Contract Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Contract Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../user/user/" class="dropdown-item">Main</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Contract <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../car/" class="dropdown-item">车辆管理</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">合同管理</a>
+</li>
+                                    
+<li>
+    <a href="../contract_account/" class="dropdown-item">合同账户</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">管理后台 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../admin/user/" class="dropdown-item">用户</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../car/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../contract_account/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">合同管理</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">修订记录</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">背景</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">产品说明</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">关键流程说明</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">接口说明</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">合同管理</h1>
+<div class="toc">
+<ul>
+<li><a href="#_1">合同管理</a><ul>
+<li><a href="#_2">修订记录</a></li>
+<li><a href="#_3">背景</a></li>
+<li><a href="#_4">产品说明</a></li>
+<li><a href="#_5">关键流程说明</a></li>
+<li><a href="#_6">接口说明</a><ul>
+<li><a href="#10">1.0 创建合同</a><ul>
+<li><a href="#_7">接口说明</a></li>
+<li><a href="#_8">请求说明</a></li>
+<li><a href="#_9">输入参数</a></li>
+<li><a href="#_10">错误说明</a></li>
+<li><a href="#_11">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#12">1.2 合同预览</a><ul>
+<li><a href="#_12">请求说明</a></li>
+<li><a href="#_13">输入参数</a></li>
+<li><a href="#_14">错误说明</a></li>
+<li><a href="#_15">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#13">1.3 保存草稿</a><ul>
+<li><a href="#_16">接口说明</a></li>
+<li><a href="#_17">请求说明</a></li>
+<li><a href="#_18">输入参数</a></li>
+<li><a href="#_19">错误说明</a></li>
+<li><a href="#_20">返回实例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="_2">修订记录</h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th>日期</th>
+<th>作者</th>
+<th>修订类型</th>
+<th>修订内容</th>
+<th>版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2020年09月08日</td>
+<td>冷立纲</td>
+<td>A</td>
+<td>新增设计方案</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>【修订类型：A-新增  M-修改 D-删除】</p>
+</blockquote>
+<h2 id="_3">背景</h2>
+<p>合同管理接口</p>
+<h2 id="_4">产品说明</h2>
+<h2 id="_5">关键流程说明</h2>
+<h2 id="_6">接口说明</h2>
+<h4 id="10">1.0 创建合同</h4>
+<h5 id="_7">接口说明</h5>
+<p>添加用户车辆</p>
+<h5 id="_8">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/contract/add</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_9">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">carId</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">车辆ID</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">name</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">名字</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">signDate</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">签署日期</td>
+<td align="left">2020年09月09日</td>
+</tr>
+<tr>
+<td align="left">valuation</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">车辆估值</td>
+<td align="left">车辆估值</td>
+</tr>
+<tr>
+<td align="left">signAddr</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">北京市朝阳区望京街</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">rentStart</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">开始时间</td>
+<td align="left">yyyyMMddHHmm</td>
+</tr>
+<tr>
+<td align="left">rentEnd</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">结束时间</td>
+<td align="left">yyyyMMddHHmm</td>
+</tr>
+<tr>
+<td align="left">returnDate</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">归还日期</td>
+<td align="left">yyyyMMddHHmm</td>
+</tr>
+<tr>
+<td align="left">returnAddr</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">归还地址</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">rentDayMoney</td>
+<td align="center">是</td>
+<td align="left">double</td>
+<td align="left">日租金</td>
+<td align="left">单位(元)</td>
+</tr>
+<tr>
+<td align="left">rentTotalMoney</td>
+<td align="center">否</td>
+<td align="left">double</td>
+<td align="left">总租金</td>
+<td align="left">单位(元)</td>
+</tr>
+<tr>
+<td align="left">rentPayType</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">支付方式</td>
+<td align="left">0 一次性支付 1 周期支付</td>
+</tr>
+<tr>
+<td align="left">cycleType</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">周期支付方式</td>
+<td align="left">1天 2月 3季度 4半年 5年</td>
+</tr>
+<tr>
+<td align="left">cycleMoney</td>
+<td align="center">否</td>
+<td align="left">double</td>
+<td align="left">周期支付金额</td>
+<td align="left">单位 元</td>
+</tr>
+<tr>
+<td align="left">depositType</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">押金类型</td>
+<td align="left">0 无押金   1押金</td>
+</tr>
+<tr>
+<td align="left">carDepositMoney</td>
+<td align="center">否</td>
+<td align="left">double</td>
+<td align="left">车辆押金</td>
+<td align="left">单位元</td>
+</tr>
+<tr>
+<td align="left">violationDepositMoney</td>
+<td align="center">否</td>
+<td align="left">double</td>
+<td align="left">违章押金</td>
+<td align="left">单位元</td>
+</tr>
+<tr>
+<td align="left">payType</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">支付方式</td>
+<td align="left">balance 余额支付 / WX_MP 微信小程序支付</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_10">错误说明</h5>
+<ol>
+<li>缺少必填的参数。</li>
+</ol>
+<h5 id="_11">返回实例</h5>
+<pre><code class="json">
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;id&quot;:&quot;xxx&quot;
+    }
+}
+
+</code></pre>
+
+<h4 id="12">1.2 合同预览</h4>
+<h5 id="_12">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/contract/preview</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_13">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">carId</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">车辆ID</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">name</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">名字</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">signDate</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">签署日期</td>
+<td align="left">2020年09月09日</td>
+</tr>
+<tr>
+<td align="left">valuation</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">车辆估值</td>
+<td align="left">车辆估值</td>
+</tr>
+<tr>
+<td align="left">signAddr</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">北京市朝阳区望京街</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">rentStart</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">开始时间</td>
+<td align="left">yyyyMMddHHmm</td>
+</tr>
+<tr>
+<td align="left">rentEnd</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">结束时间</td>
+<td align="left">yyyyMMddHHmm</td>
+</tr>
+<tr>
+<td align="left">returnDate</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">归还日期</td>
+<td align="left">yyyyMMddHHmm</td>
+</tr>
+<tr>
+<td align="left">returnAddr</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">归还地址</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">rentDayMoney</td>
+<td align="center">否</td>
+<td align="left">double</td>
+<td align="left">日租金</td>
+<td align="left">单位(元)</td>
+</tr>
+<tr>
+<td align="left">rentTotalMoney</td>
+<td align="center">否</td>
+<td align="left">double</td>
+<td align="left">总租金</td>
+<td align="left">单位(元)</td>
+</tr>
+<tr>
+<td align="left">rentPayType</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">支付方式</td>
+<td align="left">0 一次性支付 1 周期支付</td>
+</tr>
+<tr>
+<td align="left">cycleType</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">周期支付方式</td>
+<td align="left">1天 2月 3季度 4半年 5年</td>
+</tr>
+<tr>
+<td align="left">cycleMoney</td>
+<td align="center">否</td>
+<td align="left">double</td>
+<td align="left">周期支付金额</td>
+<td align="left">单位 元</td>
+</tr>
+<tr>
+<td align="left">depositType</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">押金类型</td>
+<td align="left">0 无押金   1押金</td>
+</tr>
+<tr>
+<td align="left">carDepositMoney</td>
+<td align="center">否</td>
+<td align="left">double</td>
+<td align="left">车辆押金</td>
+<td align="left">单位元</td>
+</tr>
+<tr>
+<td align="left">violationDepositMoney</td>
+<td align="center">否</td>
+<td align="left">double</td>
+<td align="left">违章押金</td>
+<td align="left">单位元</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_14">错误说明</h5>
+<h5 id="_15">返回实例</h5>
+<p>pdf 文件流</p>
+<h4 id="13">1.3 保存草稿</h4>
+<h5 id="_16">接口说明</h5>
+<p>保存合同草稿</p>
+<h5 id="_17">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/contract/save</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_18">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">carId</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">车辆ID</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">name</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">名字</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">signDate</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">签署日期</td>
+<td align="left">2020年09月09日</td>
+</tr>
+<tr>
+<td align="left">valuation</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">车辆估值</td>
+<td align="left">车辆估值</td>
+</tr>
+<tr>
+<td align="left">signAddr</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">北京市朝阳区望京街</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">rentStart</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">开始时间</td>
+<td align="left">yyyyMMddHHmm</td>
+</tr>
+<tr>
+<td align="left">rentEnd</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">结束时间</td>
+<td align="left">yyyyMMddHHmm</td>
+</tr>
+<tr>
+<td align="left">returnDate</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">归还日期</td>
+<td align="left">yyyyMMddHHmm</td>
+</tr>
+<tr>
+<td align="left">returnAddr</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">归还地址</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">rentDayMoney</td>
+<td align="center">是</td>
+<td align="left">double</td>
+<td align="left">日租金</td>
+<td align="left">单位(元)</td>
+</tr>
+<tr>
+<td align="left">rentTotalMoney</td>
+<td align="center">否</td>
+<td align="left">double</td>
+<td align="left">总租金</td>
+<td align="left">单位(元)</td>
+</tr>
+<tr>
+<td align="left">rentPayType</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">支付方式</td>
+<td align="left">0 一次性支付 1 周期支付</td>
+</tr>
+<tr>
+<td align="left">cycleType</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">周期支付方式</td>
+<td align="left">1天 2月 3季度 4半年 5年</td>
+</tr>
+<tr>
+<td align="left">cycleMoney</td>
+<td align="center">否</td>
+<td align="left">double</td>
+<td align="left">周期支付金额</td>
+<td align="left">单位 元</td>
+</tr>
+<tr>
+<td align="left">depositType</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">押金类型</td>
+<td align="left">0 无押金   1押金</td>
+</tr>
+<tr>
+<td align="left">carDepositMoney</td>
+<td align="center">否</td>
+<td align="left">double</td>
+<td align="left">车辆押金</td>
+<td align="left">单位元</td>
+</tr>
+<tr>
+<td align="left">violationDepositMoney</td>
+<td align="center">否</td>
+<td align="left">double</td>
+<td align="left">违章押金</td>
+<td align="left">单位元</td>
+</tr>
+<tr>
+<td align="left">payType</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">支付方式</td>
+<td align="left">balance 余额支付 / WX_MP 微信小程序支付</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_19">错误说明</h5>
+<ol>
+<li>缺少必填的参数。</li>
+</ol>
+<h5 id="_20">返回实例</h5>
+<pre><code class="json">
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;id&quot;:&quot;xxx&quot;  //草稿ID  
+    }
+}
+
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

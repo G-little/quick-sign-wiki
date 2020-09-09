@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>用户 - Contract Docs</title>
+        <title>车辆管理 - Contract Docs</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -45,29 +45,29 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Contract <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../contract/car/" class="dropdown-item">车辆管理</a>
+    <a href="./" class="dropdown-item active">车辆管理</a>
 </li>
                                     
 <li>
-    <a href="../../contract/contract/" class="dropdown-item">合同管理</a>
+    <a href="../contract/" class="dropdown-item">合同管理</a>
 </li>
                                     
 <li>
-    <a href="../../contract/contract_account/" class="dropdown-item">合同账户</a>
+    <a href="../contract_account/" class="dropdown-item">合同账户</a>
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">管理后台 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active">用户</a>
+    <a href="../../admin/user/" class="dropdown-item">用户</a>
 </li>
                                 </ul>
                             </li>
@@ -80,12 +80,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../../contract/contract_account/" class="nav-link">
+                                <a rel="prev" href="../../user/user/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" class="nav-link disabled">
+                                <a rel="next" href="../contract/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -107,7 +107,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">用户管理</a>
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">车辆管理接口</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">修订记录</a>
               <ul class="nav flex-column">
@@ -136,16 +136,16 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="_1">用户管理</h1>
+<h1 id="_1">车辆管理接口</h1>
 <div class="toc">
 <ul>
-<li><a href="#_1">用户管理</a><ul>
+<li><a href="#_1">车辆管理接口</a><ul>
 <li><a href="#_2">修订记录</a></li>
 <li><a href="#_3">背景</a></li>
 <li><a href="#_4">产品说明</a></li>
 <li><a href="#_5">关键流程说明</a></li>
 <li><a href="#_6">接口说明</a><ul>
-<li><a href="#10">1.0 用户列表</a><ul>
+<li><a href="#10">1.0 添加车辆</a><ul>
 <li><a href="#_7">接口说明</a></li>
 <li><a href="#_8">请求说明</a></li>
 <li><a href="#_9">输入参数</a></li>
@@ -153,7 +153,7 @@
 <li><a href="#_11">返回实例</a></li>
 </ul>
 </li>
-<li><a href="#11">1.1 会员管理</a><ul>
+<li><a href="#11">1.1 车辆列表</a><ul>
 <li><a href="#_12">接口说明</a></li>
 <li><a href="#_13">请求说明</a></li>
 <li><a href="#_14">输入参数</a></li>
@@ -161,7 +161,7 @@
 <li><a href="#_16">返回实例</a></li>
 </ul>
 </li>
-<li><a href="#11_1">1.1 用户足迹</a><ul>
+<li><a href="#12">1.2 车辆详情</a><ul>
 <li><a href="#_17">接口说明</a></li>
 <li><a href="#_18">请求说明</a></li>
 <li><a href="#_19">输入参数</a></li>
@@ -169,7 +169,7 @@
 <li><a href="#_21">返回实例</a></li>
 </ul>
 </li>
-<li><a href="#12">1.2 员工管理</a><ul>
+<li><a href="#14">1.4 删除车辆</a><ul>
 <li><a href="#_22">接口说明</a></li>
 <li><a href="#_23">请求说明</a></li>
 <li><a href="#_24">输入参数</a></li>
@@ -177,20 +177,12 @@
 <li><a href="#_26">返回实例</a></li>
 </ul>
 </li>
-<li><a href="#13">1.3 添加员工</a><ul>
+<li><a href="#15">1.5 修改车辆信息</a><ul>
 <li><a href="#_27">接口说明</a></li>
 <li><a href="#_28">请求说明</a></li>
 <li><a href="#_29">输入参数</a></li>
 <li><a href="#_30">错误说明</a></li>
 <li><a href="#_31">返回实例</a></li>
-</ul>
-</li>
-<li><a href="#14">1.4  员工充值</a><ul>
-<li><a href="#_32">接口说明</a></li>
-<li><a href="#_33">请求说明</a></li>
-<li><a href="#_34">输入参数</a></li>
-<li><a href="#_35">错误说明</a></li>
-<li><a href="#_36">返回实例</a></li>
 </ul>
 </li>
 </ul>
@@ -213,7 +205,7 @@
 </thead>
 <tbody>
 <tr>
-<td>2020年07月03日</td>
+<td>2020年09月08日</td>
 <td>冷立纲</td>
 <td>A</td>
 <td>新增设计方案</td>
@@ -225,25 +217,25 @@
 <p>【修订类型：A-新增  M-修改 D-删除】</p>
 </blockquote>
 <h2 id="_3">背景</h2>
-<p>后台用户管理相关接口</p>
+<p>车辆管理相关接口</p>
 <h2 id="_4">产品说明</h2>
 <h2 id="_5">关键流程说明</h2>
 <h2 id="_6">接口说明</h2>
-<h4 id="10">1.0 用户列表</h4>
+<h4 id="10">1.0 添加车辆</h4>
 <h5 id="_7">接口说明</h5>
-<p>管理中心用户列表</p>
+<p>添加用户车辆</p>
 <h5 id="_8">请求说明</h5>
 <table>
 <thead>
 <tr>
 <th align="left">http 请求方式</th>
-<th align="center">get</th>
+<th align="center">post</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="left">url</td>
-<td align="center">/admin/user/list</td>
+<td align="center">/car/add</td>
 </tr>
 </tbody>
 </table>
@@ -260,79 +252,89 @@
 </thead>
 <tbody>
 <tr>
-<td align="left">name</td>
-<td align="center">否</td>
-<td align="left">strring</td>
-<td align="left">用户名</td>
+<td align="left">images</td>
+<td align="center">是</td>
+<td align="left">string[]</td>
+<td align="left">车辆图片数组</td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left">uid</td>
-<td align="center">否</td>
-<td align="left">int</td>
-<td align="left">用户ID</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">mobile</td>
-<td align="center">否</td>
+<td align="left">brand</td>
+<td align="center">是</td>
 <td align="left">string</td>
-<td align="left">手机号</td>
+<td align="left">品牌</td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left">page</td>
-<td align="center">否</td>
-<td align="left">int</td>
-<td align="left">分页</td>
-<td align="left">默认1</td>
+<td align="left">model</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">车辆型号</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td align="left">limit</td>
-<td align="center">否</td>
-<td align="left">int</td>
-<td align="left">限制单页条数</td>
-<td align="left">默认10</td>
+<td align="left">valuation</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">车辆估值</td>
+<td align="left">车辆估值</td>
+</tr>
+<tr>
+<td align="left">color</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">车辆颜色</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">vin</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">车辆识别码</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">engineNum</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">发动机号</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">carNum</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">车牌号</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">oilNum</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">油号</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 <h5 id="_10">错误说明</h5>
+<ol>
+<li>缺少必填的参数。</li>
+</ol>
 <h5 id="_11">返回实例</h5>
-<pre><code class="json">    {
+<pre><code class="json">
+{
     &quot;c&quot;: 0,
     &quot;m&quot;: null,
     &quot;d&quot;: {
-        &quot;pageSize&quot;: 10,
-        &quot;currentPage&quot;: 1,
-        &quot;list&quot;: [
-            {
-                &quot;uid&quot;: 11452,
-                &quot;avatar&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83erWxMXolPylQhpDXp2ian7PBuoDRWGINpdHib4KRB1aQiahicibznMcyj7atEIw9HM98dTQW19xKAWicFog/132&quot;,
-                &quot;name&quot;: &quot;狂奔的蜗牛&quot;,
-                &quot;gender&quot;: 1,    //性别 1:男  2:女  0:保密
-                &quot;birthday&quot;: null,
-                &quot;status&quot;: 0,
-                &quot;mobile&quot;: null,
-                &quot;createTime&quot;: 1595066012848,
-                &quot;updateTime&quot;: null,
-                &quot;vipStartTime&quot;: null,
-                &quot;vipEndTime&quot;: null,
-                &quot;userSource&quot;: null, //用户来源 APP:  应用  MINI: 小程序
-                &quot;level&quot;: null, //会员等级
-                &quot;vipTotalDays&quot;: null, //会员累计天数
-                &quot;vip&quot;: false //是否vip
-            }
-        ],
-        &quot;end&quot;: true,
-        &quot;empty&quot;: false,
-        &quot;startIndex&quot;: 0
+        &quot;id&quot;:&quot;xxx&quot;
     }
-}  
+}
+
 </code></pre>
 
-<h4 id="11">1.1 会员管理</h4>
+<h4 id="11">1.1 车辆列表</h4>
 <h5 id="_12">接口说明</h5>
-<p>会员条件查询列表</p>
+<p>添加用户车辆</p>
 <h5 id="_13">请求说明</h5>
 <table>
 <thead>
@@ -344,7 +346,7 @@
 <tbody>
 <tr>
 <td align="left">url</td>
-<td align="center">/admin/user/vip_list</td>
+<td align="center">/car/list</td>
 </tr>
 </tbody>
 </table>
@@ -361,87 +363,58 @@
 </thead>
 <tbody>
 <tr>
-<td align="left">name</td>
+<td align="left">last</td>
 <td align="center">否</td>
-<td align="left">strring</td>
-<td align="left">用户名</td>
+<td align="left">long</td>
+<td align="left">上次拉取时间戳</td>
 <td align="left"></td>
-</tr>
-<tr>
-<td align="left">uid</td>
-<td align="center">否</td>
-<td align="left">int</td>
-<td align="left">用户ID</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">mobile</td>
-<td align="center">否</td>
-<td align="left">string</td>
-<td align="left">手机号</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">vipStatus</td>
-<td align="center">否</td>
-<td align="left">int</td>
-<td align="left">会员状态</td>
-<td align="left">0 全部 1 vip 2 已过期</td>
-</tr>
-<tr>
-<td align="left">page</td>
-<td align="center">否</td>
-<td align="left">int</td>
-<td align="left">分页</td>
-<td align="left">默认1</td>
 </tr>
 <tr>
 <td align="left">limit</td>
 <td align="center">否</td>
 <td align="left">int</td>
-<td align="left">限制单页条数</td>
-<td align="left">默认10</td>
+<td align="left">分页条数</td>
+<td align="left">默认20</td>
 </tr>
 </tbody>
 </table>
 <h5 id="_15">错误说明</h5>
+<ol>
+<li>缺少必填的参数。</li>
+</ol>
 <h5 id="_16">返回实例</h5>
-<pre><code class="json">    {
+<pre><code class="json">
+{
     &quot;c&quot;: 0,
     &quot;m&quot;: null,
     &quot;d&quot;: {
-        &quot;pageSize&quot;: 10,
-        &quot;currentPage&quot;: 1,
+        &quot;limit&quot;: 20,
+        &quot;last&quot;: 1599643596960, //上次拉取时间戳
         &quot;list&quot;: [
             {
-                &quot;uid&quot;: 11452,
-                &quot;avatar&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83erWxMXolPylQhpDXp2ian7PBuoDRWGINpdHib4KRB1aQiahicibznMcyj7atEIw9HM98dTQW19xKAWicFog/132&quot;,
-                &quot;name&quot;: &quot;狂奔的蜗牛&quot;,
-                &quot;gender&quot;: 1,    //性别 1:男  2:女  0:保密
-                &quot;birthday&quot;: null,
-                &quot;status&quot;: 0,
-                &quot;mobile&quot;: null,
-                &quot;createTime&quot;: 1595066012848,
-                &quot;updateTime&quot;: null,
-                &quot;vipStartTime&quot;: null,
-                &quot;vipEndTime&quot;: null,
-                &quot;userSource&quot;: null, //用户来源 APP:  应用  MINI: 小程序
-                &quot;level&quot;: null, //会员等级
-                &quot;vipTotalDays&quot;: null, //会员累计天数
-                &quot;vip&quot;: false, //是否vip
-                &quot;buyTimes&quot;: 5 // 会员累计购买次数
+                &quot;id&quot;: 2, //Id
+                &quot;images&quot;: [ //图片
+                    &quot;/a&quot;
+                ],
+                &quot;brand&quot;: &quot;法拉利&quot;, //品牌 
+                &quot;model&quot;: &quot;458&quot;, //型号
+                &quot;valuation&quot;: &quot;200万&quot;, //估值
+                &quot;color&quot;: &quot;red&quot;, //颜色
+                &quot;vin&quot;: &quot;123456&quot;, //车辆识别号
+                &quot;engineNum&quot;: &quot;22222&quot;, //发动机号
+                &quot;carNum&quot;: &quot;xxx&quot;, //车牌
+                &quot;oilNum&quot;: &quot;98#&quot;, //油号
+                &quot;addTime&quot;: &quot;2020-09-09 17:26:36&quot; //添加时间
             }
         ],
-        &quot;end&quot;: true,
-        &quot;empty&quot;: false,
-        &quot;startIndex&quot;: 0
+        &quot;end&quot;: true
     }
-}  
+}
 </code></pre>
 
-<h4 id="11_1">1.1 用户足迹</h4>
+<h4 id="12">1.2 车辆详情</h4>
 <h5 id="_17">接口说明</h5>
-<p>用户足迹</p>
+<p>车辆详细信息</p>
 <h5 id="_18">请求说明</h5>
 <table>
 <thead>
@@ -453,7 +426,7 @@
 <tbody>
 <tr>
 <td align="left">url</td>
-<td align="center">/admin/footprint/list</td>
+<td align="center">/car/detail</td>
 </tr>
 </tbody>
 </table>
@@ -470,92 +443,57 @@
 </thead>
 <tbody>
 <tr>
-<td align="left">name</td>
-<td align="center">否</td>
-<td align="left">strring</td>
-<td align="left">用户名</td>
+<td align="left">id</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">车辆ID</td>
 <td align="left"></td>
-</tr>
-<tr>
-<td align="left">uid</td>
-<td align="center">否</td>
-<td align="left">int</td>
-<td align="left">用户ID</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">goodsId</td>
-<td align="center">否</td>
-<td align="left">int</td>
-<td align="left">产品ID</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">goodsName</td>
-<td align="center">否</td>
-<td align="left">int</td>
-<td align="left">产品ID</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">page</td>
-<td align="center">否</td>
-<td align="left">int</td>
-<td align="left">分页</td>
-<td align="left">默认1</td>
-</tr>
-<tr>
-<td align="left">limit</td>
-<td align="center">否</td>
-<td align="left">int</td>
-<td align="left">限制单页条数</td>
-<td align="left">默认10</td>
 </tr>
 </tbody>
 </table>
 <h5 id="_20">错误说明</h5>
+<ol>
+<li>缺少必填的参数。</li>
+</ol>
 <h5 id="_21">返回实例</h5>
 <pre><code class="json">
-    {
+{
     &quot;c&quot;: 0,
     &quot;m&quot;: null,
     &quot;d&quot;: {
-        &quot;pageSize&quot;: 10,
-        &quot;currentPage&quot;: 1,
-        &quot;list&quot;: [
-            {
-                &quot;id&quot;: 766,
-                &quot;userId&quot;: 11450,
-                &quot;goodsId&quot;: 1006002,
-                &quot;goodsName&quot;: &quot;产品名称&quot;,
-                &quot;addTime&quot;: &quot;2020-07-19 15:17:59&quot;,
-                &quot;updateTime&quot;: &quot;2020-07-19 15:17:59&quot;,
-                &quot;deleted&quot;: false
-            }
+        &quot;id&quot;: 2, //Id
+        &quot;images&quot;: [ //图片
+            &quot;/a&quot;
         ],
-        &quot;end&quot;: true,
-        &quot;empty&quot;: false,
-        &quot;startIndex&quot;: 0
+        &quot;brand&quot;: &quot;法拉利&quot;, //品牌 
+        &quot;model&quot;: &quot;458&quot;, //型号
+        &quot;valuation&quot;: &quot;200万&quot;, //估值
+        &quot;color&quot;: &quot;red&quot;, //颜色
+        &quot;vin&quot;: &quot;123456&quot;, //车辆识别号
+        &quot;engineNum&quot;: &quot;22222&quot;, //发动机号
+        &quot;carNum&quot;: &quot;xxx&quot;, //车牌
+        &quot;oilNum&quot;: &quot;98#&quot;, //油号
+        &quot;addTime&quot;: &quot;2020-09-09 17:26:36&quot; //添加时间
     }
 }
 
 </code></pre>
 
-<h4 id="12">1.2 员工管理</h4>
+<h4 id="14">1.4 删除车辆</h4>
 <h5 id="_22">接口说明</h5>
-<p>管理中心用户列表</p>
+<p>车辆详细信息</p>
 <h5 id="_23">请求说明</h5>
 <table>
 <thead>
 <tr>
 <th align="left">http 请求方式</th>
-<th align="center">get</th>
+<th align="center">post</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="left">url</td>
-<td align="center">/admin/employee/list</td>
+<td align="center">/car/delete</td>
 </tr>
 </tbody>
 </table>
@@ -572,94 +510,33 @@
 </thead>
 <tbody>
 <tr>
-<td align="left">name</td>
-<td align="center">否</td>
-<td align="left">strring</td>
-<td align="left">用户名</td>
+<td align="left">id</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">车辆ID</td>
 <td align="left"></td>
-</tr>
-<tr>
-<td align="left">uid</td>
-<td align="center">否</td>
-<td align="left">int</td>
-<td align="left">用户ID</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">mobile</td>
-<td align="center">否</td>
-<td align="left">string</td>
-<td align="left">手机号</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">employeeType</td>
-<td align="center">否</td>
-<td align="left">int</td>
-<td align="left">员工类型</td>
-<td align="left">1 中标优选</td>
-</tr>
-<tr>
-<td align="left">page</td>
-<td align="center">否</td>
-<td align="left">int</td>
-<td align="left">分页</td>
-<td align="left">默认1</td>
-</tr>
-<tr>
-<td align="left">limit</td>
-<td align="center">否</td>
-<td align="left">int</td>
-<td align="left">限制单页条数</td>
-<td align="left">默认10</td>
 </tr>
 </tbody>
 </table>
 <h5 id="_25">错误说明</h5>
+<ol>
+<li>缺少必填的参数。</li>
+</ol>
 <h5 id="_26">返回实例</h5>
 <pre><code class="json">
-    {
+{
     &quot;c&quot;: 0,
     &quot;m&quot;: null,
     &quot;d&quot;: {
-        &quot;total&quot;: 15,
-        &quot;list&quot;: [
-            {
-                &quot;uid&quot;: 11462, //用户ID
-                &quot;avatar&quot;: null, //头像
-                &quot;name&quot;: null, // 昵称
-                &quot;createTime&quot;: 1595935404952, //创建时间
-                &quot;mobile&quot;: &quot;15201008963&quot;,//手机号
-                &quot;employeeType&quot;: &quot;&quot;, //员工类型
-                &quot;money&quot;: null,  //余额
-                &quot;lastChargeMoney&quot;: null, //最后充值金额
-                &quot;lastChargeTime&quot;: null //最后充值时间
-            }
-        ],
-        &quot;pageNum&quot;: 1,
-        &quot;pageSize&quot;: 10,
-        &quot;size&quot;: 0,
-        &quot;startRow&quot;: 0,
-        &quot;endRow&quot;: 0,
-        &quot;pages&quot;: 0,
-        &quot;prePage&quot;: 0,
-        &quot;nextPage&quot;: 0,
-        &quot;isFirstPage&quot;: false,
-        &quot;isLastPage&quot;: false,
-        &quot;hasPreviousPage&quot;: false,
-        &quot;hasNextPage&quot;: false,
-        &quot;navigatePages&quot;: 0,
-        &quot;navigatepageNums&quot;: null,
-        &quot;navigateFirstPage&quot;: 0,
-        &quot;navigateLastPage&quot;: 0
+        
     }
 }
 
 </code></pre>
 
-<h4 id="13">1.3 添加员工</h4>
+<h4 id="15">1.5 修改车辆信息</h4>
 <h5 id="_27">接口说明</h5>
-<p>管理中心用户列表</p>
+<p>修改车辆信息</p>
 <h5 id="_28">请求说明</h5>
 <table>
 <thead>
@@ -671,7 +548,7 @@
 <tbody>
 <tr>
 <td align="left">url</td>
-<td align="center">/admin/employee/create</td>
+<td align="center">/car/update</td>
 </tr>
 </tbody>
 </table>
@@ -688,98 +565,77 @@
 </thead>
 <tbody>
 <tr>
-<td align="left">name</td>
-<td align="center">是</td>
-<td align="left">strring</td>
-<td align="left">用户名</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">mobile</td>
-<td align="center">是</td>
-<td align="left">string</td>
-<td align="left">手机号</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">employeeType</td>
+<td align="left">images</td>
 <td align="center">否</td>
-<td align="left">int</td>
-<td align="left">员工类型</td>
-<td align="left">1 中标优选</td>
+<td align="left">string[]</td>
+<td align="left">车辆图片数组</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">brand</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">品牌</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">model</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">车辆型号</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">valuation</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">车辆估值</td>
+<td align="left">车辆估值</td>
+</tr>
+<tr>
+<td align="left">color</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">车辆颜色</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">vin</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">车辆识别码</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">engineNum</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">发动机号</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">carNum</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">车牌号</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">oilNum</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">油号</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 <h5 id="_30">错误说明</h5>
+<ol>
+<li>缺少必填的参数。</li>
+</ol>
 <h5 id="_31">返回实例</h5>
 <pre><code class="json">
-    {
-    &quot;c&quot;: 0,
-    &quot;m&quot;: null,
-    &quot;d&quot;: {
-       &quot;id&quot;:152 //用户ID
-    }
-}
-
-</code></pre>
-
-<h4 id="14">1.4  员工充值</h4>
-<h5 id="_32">接口说明</h5>
-<p>管理中心用户列表</p>
-<h5 id="_33">请求说明</h5>
-<table>
-<thead>
-<tr>
-<th align="left">http 请求方式</th>
-<th align="center">post</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">url</td>
-<td align="center">/admin/employee/transfer</td>
-</tr>
-</tbody>
-</table>
-<h5 id="_34">输入参数</h5>
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="center">必选</th>
-<th align="left">类型</th>
-<th align="left">参数说明</th>
-<th align="left">备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">uidList</td>
-<td align="center">是</td>
-<td align="left">int[]</td>
-<td align="left">用户列表</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">money</td>
-<td align="center">是</td>
-<td align="left">double</td>
-<td align="left">转账金额</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">reason</td>
-<td align="center">是</td>
-<td align="left">string</td>
-<td align="left">转账说明</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-<h5 id="_35">错误说明</h5>
-<h5 id="_36">返回实例</h5>
-<pre><code class="json">
-    {
+{
     &quot;c&quot;: 0,
     &quot;m&quot;: null,
     &quot;d&quot;: {
