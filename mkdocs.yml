@@ -4,7 +4,9 @@
     - User: 
       - Main: './user/user.md'
     - Contract: 
-      - 合同: './contract/index.md'    
+      - 车辆管理: './contract/car.md'    
+      - 合同管理: './contract/contract.md'    
+      - 合同账户: './contract/contract_account.md'    
      
     - 管理后台: 
       - 用户: './admin/user.md'    
