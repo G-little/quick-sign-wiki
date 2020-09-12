@@ -168,6 +168,46 @@
 <li><a href="#_20">返回实例</a></li>
 </ul>
 </li>
+<li><a href="#14">1.4 结算页</a><ul>
+<li><a href="#_21">接口说明</a></li>
+<li><a href="#_22">请求说明</a></li>
+<li><a href="#_23">输入参数</a></li>
+<li><a href="#_24">错误说明</a></li>
+<li><a href="#_25">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#15">1.5 合同预签页</a><ul>
+<li><a href="#_26">接口说明</a></li>
+<li><a href="#_27">请求说明</a></li>
+<li><a href="#_28">输入参数</a></li>
+<li><a href="#_29">错误说明</a></li>
+<li><a href="#_30">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#15_1">1.5 合同预签页</a><ul>
+<li><a href="#_31">接口说明</a></li>
+<li><a href="#_32">请求说明</a></li>
+<li><a href="#_33">输入参数</a></li>
+<li><a href="#_34">错误说明</a></li>
+<li><a href="#_35">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#15_2">1.5 合同签署第一步验证码获取</a><ul>
+<li><a href="#_36">接口说明</a></li>
+<li><a href="#_37">请求说明</a></li>
+<li><a href="#_38">输入参数</a></li>
+<li><a href="#_39">错误说明</a></li>
+<li><a href="#_40">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#16">1.6 合同签署第二步</a><ul>
+<li><a href="#_41">接口说明</a></li>
+<li><a href="#_42">请求说明</a></li>
+<li><a href="#_43">输入参数</a></li>
+<li><a href="#_44">错误说明</a></li>
+<li><a href="#_45">返回实例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -368,13 +408,14 @@
 </ol>
 <h5 id="_11">返回实例</h5>
 <pre><code class="json">
-{
+    {
     &quot;c&quot;: 0,
     &quot;m&quot;: null,
     &quot;d&quot;: {
-        &quot;id&quot;:&quot;xxx&quot;
+            &quot;payOrderId&quot;:xxxx,//订单号
+            &quot;callPayInfo&quot;:xxxxx, //各平台对应支付信息 
+       }
     }
-}
 
 </code></pre>
 
@@ -699,6 +740,278 @@
     &quot;m&quot;: null,
     &quot;d&quot;: {
         &quot;id&quot;:&quot;xxx&quot;  //草稿ID  
+    }
+}
+
+</code></pre>
+
+<h4 id="14">1.4 结算页</h4>
+<h5 id="_21">接口说明</h5>
+<p>输出用户合同余额</p>
+<h5 id="_22">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/contract/checkout</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_23">输入参数</h5>
+<p>无</p>
+<h5 id="_24">错误说明</h5>
+<ol>
+<li>缺少必填的参数。</li>
+</ol>
+<h5 id="_25">返回实例</h5>
+<pre><code class="json">
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;balance&quot;: 0, //剩余合同
+        &quot;price&quot;: 20.0, //合同单价
+        &quot;minPrice&quot;: 10.0 //合同最低价
+    }
+}
+
+</code></pre>
+
+<h4 id="15">1.5 合同预签页</h4>
+<h5 id="_26">接口说明</h5>
+<p>输出用户合同余额</p>
+<h5 id="_27">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/contract/presign/{id}</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_28">输入参数</h5>
+<p>URL参数:</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">合同ID</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_29">错误说明</h5>
+<ol>
+<li>缺少必填的参数。</li>
+</ol>
+<h5 id="_30">返回实例</h5>
+<pre><code class="json">
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;id&quot;: 9, //合同ID
+        &quot;realname&quot;: &quot;冷立纲&quot;, //真实姓名
+        &quot;avatar&quot;: null, //头像
+        &quot;title&quot;: &quot;test&quot;, //title
+        &quot;status&quot;: 1, //状态 0:初始 1:待签署 2:已签署
+        &quot;expireTime&quot;: null
+    }
+}
+
+</code></pre>
+
+<h4 id="15_1">1.5 合同预签页</h4>
+<h5 id="_31">接口说明</h5>
+<p>输出用户合同余额</p>
+<h5 id="_32">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/contract/detail/{id}</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_33">输入参数</h5>
+<p>URL参数:</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">合同ID</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_34">错误说明</h5>
+<ol>
+<li>缺少必填的参数。</li>
+</ol>
+<h5 id="_35">返回实例</h5>
+<pre><code class="json">
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;id&quot;: {
+            &quot;id&quot;: 10,
+            &quot;url&quot;: &quot;http://quick-contract.oss-cn-beijing.aliyuncs.com/emg9bthg9yr7cx35nayi.pdf?Expires=1599833230&amp;OSSAccessKeyId=LTAI4FzddSZr1XtviwXwEGzz&amp;Signature=vfelRZ93HUM6xhyg82Ww0iHbk1o%3D&quot;,  //合同，有效期10分钟
+            &quot;expireTime&quot;: &quot;2020-09-12 21:55:15&quot;, //过期时间24小时
+            &quot;status&quot;: 1 // 1 待签署 2 已签署 0 初始 -1 过期作废
+        }
+    }
+}
+
+</code></pre>
+
+<h4 id="15_2">1.5 合同签署第一步验证码获取</h4>
+<h5 id="_36">接口说明</h5>
+<p>输出用户合同余额</p>
+<h5 id="_37">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/contract/sign/{id}/step1</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_38">输入参数</h5>
+<p>URL参数:</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">合同ID</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_39">错误说明</h5>
+<ol>
+<li>缺少必填的参数。</li>
+</ol>
+<h5 id="_40">返回实例</h5>
+<pre><code class="json">
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;flowId&quot;: &quot;1427689130229263187&quot; //流水
+    }
+}
+
+</code></pre>
+
+<h4 id="16">1.6 合同签署第二步</h4>
+<h5 id="_41">接口说明</h5>
+<p>输出用户合同余额</p>
+<h5 id="_42">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/contract/sign/{id}/step2</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_43">输入参数</h5>
+<p>URL参数:</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">合同ID</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_44">错误说明</h5>
+<ol>
+<li>缺少必填的参数。</li>
+</ol>
+<h5 id="_45">返回实例</h5>
+<pre><code class="json">
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+
     }
 }
 
