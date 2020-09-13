@@ -253,6 +253,26 @@
 <li><a href="#_75">返回实例</a></li>
 </ul>
 </li>
+<li><a href="#113">1.13 我的首页接口</a><ul>
+<li><a href="#_76">接口说明</a></li>
+<li><a href="#_77">请求说明</a></li>
+<li><a href="#_78">输入参数</a></li>
+<li><a href="#_79">错误说明</a></li>
+<li><a href="#_80">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#114">1.14 获取短信验证码</a><ul>
+<li><a href="#_81">接口说明</a></li>
+<li><a href="#_82">请求说明</a></li>
+<li><a href="#_83">输入参数</a></li>
+<li><a href="#_84">错误说明</a></li>
+<li><a href="#_85">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#114_1">1.14 实名认证修改说明</a><ul>
+<li><a href="#_86">接口说明</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -757,10 +777,10 @@
 </thead>
 <tbody>
 <tr>
-<td align="left">mobile</td>
+<td align="left">flowId</td>
 <td align="center">是</td>
 <td align="left">string</td>
-<td align="left">手机号</td>
+<td align="left">上一步返回流水号</td>
 <td align="left"></td>
 </tr>
 <tr>
@@ -1105,7 +1125,187 @@
     }
 }
 
-</code></pre></div>
+</code></pre>
+
+<h4 id="113">1.13 我的首页接口</h4>
+<h5 id="_76">接口说明</h5>
+<p>我的首页信息接口</p>
+<h5 id="_77">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/my/index</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_78">输入参数</h5>
+<h5 id="_79">错误说明</h5>
+<h5 id="_80">返回实例</h5>
+<pre><code class="json">{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;avatar&quot;: null, //头像
+        &quot;name&quot;: null, //昵称
+        &quot;mobile&quot;: &quot;15201008961&quot;, //手机号
+        &quot;certStatus&quot;: 1, //认证状态
+        &quot;balance&quot;: 0 //合同余额
+    }
+}
+</code></pre>
+
+<h4 id="114">1.14 获取短信验证码</h4>
+<h5 id="_81">接口说明</h5>
+<p>登录时，获取短信密码的功能，程序会有一个开关控制是否弹出动态页面验证码（防止短信接口被刷）</p>
+<h5 id="_82">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/user/sendsms</td>
+</tr>
+<tr>
+<td align="left">token说明</td>
+<td align="center">如果是更换手机号，校验手机身份需要登陆状态</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_83">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">mobile</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">用户注册或登录时所填的手机号</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">countryCode</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">注册或登录手机号码的国际区号</td>
+<td align="left">客户端需要过滤掉非数字的字符，例如：+86处理成86，+1-90处理成190等。如果不传此值，则默认为中国区号86。</td>
+</tr>
+<tr>
+<td align="left">deviceId</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">设备号</td>
+<td align="left">只能是数字、大小写英文字母组成，且长度在1到100位之间</td>
+</tr>
+<tr>
+<td align="left">smsType</td>
+<td align="center">否</td>
+<td align="left">Integer</td>
+<td align="left">发短信的类型</td>
+<td align="left">验证码的下发类型 1或不填（赋默认值1）：短信验证码 2：语音验证码</td>
+</tr>
+<tr>
+<td align="left">interfaceType</td>
+<td align="center">是</td>
+<td align="left">Integer</td>
+<td align="left">发短信的接口类型</td>
+<td align="left">1：注册登录接口的发短信 2：修改手机号的发短信，俩接口区别在于后者需要手机号不能存在  4:公众号手机号登录 5:用户手机发短信校验，确定用户身份（用于更换手机号）</td>
+</tr>
+<tr>
+<td align="left">captcha</td>
+<td align="center">否</td>
+<td align="left">Integer</td>
+<td align="left">页面动态验证码</td>
+<td align="left">用户获取短信验证码超过规定次数后弹出页面动态验证码。自测阶段恒需要弹动态验证码</td>
+</tr>
+<tr>
+<td align="left">deviceType</td>
+<td align="center">否</td>
+<td align="left">String</td>
+<td align="left">设备类型</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">code</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">参数签名</td>
+<td align="left">原code算法：MD5(mobile + deviceId + VERSION_SECRET_KEY + ct)添加上国际区号后的code算法：MD5(countryCode + mobile + deviceId + VERSION_SECRET_KEY + ct)备注：生成code的countryCode和mobile都必须是过滤掉特殊字符的，否则生成的code与服务端的会匹配不上。</td>
+</tr>
+<tr>
+<td align="left">ct</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">时间戳</td>
+<td align="left">接口请求时的当前时间戳</td>
+</tr>
+<tr>
+<td align="left">loginVersion</td>
+<td align="center">是</td>
+<td align="left">Integer</td>
+<td align="left">当前支持登录的版本号</td>
+<td align="left">目前支持loginVersion=1的版本登录</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_84">错误说明</h5>
+<p>先整理可能的错误类型，具体对应的错误码实施时再确定：</p>
+<ol>
+<li>
+<p>缺少必填的参数。</p>
+</li>
+<li>
+<p>无效的手机号码。</p>
+</li>
+<li>
+<p>手机号发送验证码次数超限。</p>
+</li>
+<li>
+<p>一分钟只能发送一条短信。</p>
+</li>
+<li>
+<p>用户操作异常。</p>
+</li>
+</ol>
+<h5 id="_85">返回实例</h5>
+<pre><code class="json">{
+
+  &quot;c&quot;: &quot;0&quot;
+
+  &quot;m&quot;: &quot;操作成功&quot;,
+
+  &quot;d&quot;: {}
+
+}
+</code></pre>
+
+<h4 id="114_1">1.14 实名认证修改说明</h4>
+<h5 id="_86">接口说明</h5>
+<ol>
+<li>原手机号认证获取短信验证码  /user/sendsms  interfaceType 5</li>
+<li>原手机号验证码认证 /user/mobile/update/step1</li>
+<li>新手机号验证码申请  /user/realname/update</li>
+<li>新手机号验证码认证  /user/mobile/update/step2</li>
+</ol></div>
             </div>
         </div>
 

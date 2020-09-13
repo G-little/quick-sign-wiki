@@ -229,33 +229,7 @@
 </tbody>
 </table>
 <h5 id="_9">输入参数</h5>
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="center">必选</th>
-<th align="left">类型</th>
-<th align="left">参数说明</th>
-<th align="left">备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">page</td>
-<td align="center">否</td>
-<td align="left">int</td>
-<td align="left">当前分页</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">limit</td>
-<td align="center">否</td>
-<td align="left">int</td>
-<td align="left">分页条数</td>
-<td align="left">默认20</td>
-</tr>
-</tbody>
-</table>
+<p>无</p>
 <h5 id="_10">错误说明</h5>
 <ol>
 <li>缺少必填的参数。</li>
@@ -265,9 +239,24 @@
 {
     &quot;c&quot;: 0,
     &quot;m&quot;: null,
-    &quot;d&quot;: {
-        &quot;id&quot;:&quot;xxx&quot;
-    }
+    &quot;d&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;countractCount&quot;: 20, //合同份数
+            &quot;originalPrice&quot;: 400.0, //原价
+            &quot;price&quot;: 3.0, //现价格
+            &quot;promotionInfo&quot;: &quot;7.5折优惠&quot;, //优惠信息
+            &quot;images&quot;: null //图片
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;countractCount&quot;: 100,
+            &quot;originalPrice&quot;: 2000.0,
+            &quot;price&quot;: 1000.0,
+            &quot;promotionInfo&quot;: &quot;5折优惠&quot;,
+            &quot;images&quot;: null
+        }
+    ]
 }
 
 </code></pre>
@@ -316,9 +305,10 @@
     &quot;c&quot;: 0,
     &quot;m&quot;: null,
     &quot;d&quot;: {
-        // 支付参数
+            &quot;payOrderId&quot;:xxxx,//订单号
+            &quot;callPayInfo&quot;:xxxxx, //各平台对应支付信息 
+       }
     }
-}
 
 </code></pre>
 
@@ -370,11 +360,22 @@
 <h5 id="_19">返回实例</h5>
 <pre><code class="json">
 {
-    &quot;c&quot;: 0,
-    &quot;m&quot;: null,
-    &quot;d&quot;: {
-        // 支付参数
-    }
+    &quot;currentPage&quot;: 1,
+    &quot;empty&quot;: false,
+    &quot;end&quot;: true,
+    &quot;list&quot;: [{
+        &quot;money&quot;: 100, //金额
+        &quot;amount&quot;: 10, //份数
+        &quot;balance&quot;: 10, //余额
+        &quot;createTime&quot;: 11111, //充值时间
+        &quot;expireTime&quot;: 11111, //失效时间
+        &quot;tradeNum&quot;: &quot;xxxxx&quot;, //流水
+        &quot;uid&quot;: 10004, //用户
+        &quot;updateTime&quot;: 11111  //更新时间
+    }],
+    &quot;pageSize&quot;: 10,
+    &quot;startIndex&quot;: 0,
+    &quot;totalPage&quot;: 1
 }
 
 </code></pre>
