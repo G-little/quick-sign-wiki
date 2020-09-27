@@ -224,6 +224,14 @@
 <li><a href="#_55">返回实例</a></li>
 </ul>
 </li>
+<li><a href="#18">1.8 发邮件</a><ul>
+<li><a href="#_56">接口说明</a></li>
+<li><a href="#_57">请求说明</a></li>
+<li><a href="#_58">输入参数</a></li>
+<li><a href="#_59">错误说明</a></li>
+<li><a href="#_60">返回实例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1209,6 +1217,62 @@
         &quot;carEngineNum&quot;: &quot;22222&quot;, //引擎号
         &quot;carNum&quot;: &quot;xxx&quot;, //车牌号
         &quot;carOilNum&quot;: &quot;98#&quot;, //油号
+    }
+}
+
+</code></pre>
+
+<h4 id="18">1.8 发邮件</h4>
+<h5 id="_56">接口说明</h5>
+<p>输出用户合同余额</p>
+<h5 id="_57">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/contract/mail/{id}</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_58">输入参数</h5>
+<p>URL参数:</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">email</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">电子邮箱</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_59">错误说明</h5>
+<ol>
+<li>缺少必填的参数。</li>
+</ol>
+<h5 id="_60">返回实例</h5>
+<pre><code class="json">
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+
     }
 }
 
