@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>登录 - Contract Docs</title>
+        <title>后台接口 - Contract Docs</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -67,7 +67,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active">登录</a>
+    <a href="./" class="dropdown-item active">后台接口</a>
 </li>
                                     
 <li>
@@ -540,11 +540,54 @@
 </tbody>
 </table>
 <h5 id="_36">输入参数</h5>
-<p>| realName      | 否|  string  |  用户名  |   |
-| type      | 否|  类型  |   int | 1 充值 2 消耗   |
-| mobile      | 否|  string  |  手机号 |   |
-| page      | 否|  int  |  页码 |   |
-| limit      | 否|  int  |  单页条数 |   |</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">realName</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">用户名</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">type</td>
+<td align="center">否</td>
+<td align="left">类型</td>
+<td align="left">int</td>
+<td align="left">1 充值 2 消耗</td>
+</tr>
+<tr>
+<td align="left">mobile</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">手机号</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">page</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">页码</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">limit</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">单页条数</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
 <h5 id="_37">错误说明</h5>
 <h5 id="_38">返回实例</h5>
 <pre><code class="json">    {
@@ -574,12 +617,61 @@
 </tbody>
 </table>
 <h5 id="_41">输入参数</h5>
-<p>| realName      | 否|  string  |  用户名  |   |
-| type      | 否|  类型  |   int | 不传所有 1 甲方 2 乙方  |
-| idcardNum      | 否|  string  |  身份证 |   |
-| mobile      | 否|  string  |  手机号 |   |
-| page      | 否|  int  |  页码 |   |
-| limit      | 否|  int  |  单页条数 |   |</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">realName</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">用户名</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">type</td>
+<td align="center">否</td>
+<td align="left">类型</td>
+<td align="left">int</td>
+<td align="left">不传所有 1 甲方 2 乙方</td>
+</tr>
+<tr>
+<td align="left">idcardNum</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">身份证</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">mobile</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">手机号</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">page</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">页码</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">limit</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">单页条数</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
 <h5 id="_42">错误说明</h5>
 <h5 id="_43">返回实例</h5>
 <pre><code class="json">    {
@@ -609,7 +701,26 @@
 </tbody>
 </table>
 <h5 id="_46">输入参数</h5>
-<p>| id      | shi|  int  |  合同ID  |   |</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">合同ID</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
 <h5 id="_47">错误说明</h5>
 <h5 id="_48">返回实例</h5>
 <pre><code class="json">    {
@@ -639,7 +750,26 @@
 </tbody>
 </table>
 <h5 id="_51">输入参数</h5>
-<p>| id      | shi|  int  |  合同ID  |   |</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="center">shi</td>
+<td align="left">int</td>
+<td align="left">合同ID</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
 <h5 id="_52">错误说明</h5>
 <h5 id="_53">返回实例</h5>
 <pre><code class="json">    {
