@@ -78,6 +78,7 @@ _将accessToken作为请求头 Authorization: 'token'  发送请求即可获取�
         "gender": 1, //性别
         "birthday": 153000000, //生日
         "status": 0,
+        "entCertStatus": 1 //企业认证状态
         "mobile": "15201008961",//手机号
         "createTime": 1590149492786, //创建时间
         "updateTime": 1590149538735 //更新时间
