@@ -57,6 +57,8 @@
 | carDepositMoney   | 否 | double  | 车辆押金 |  单位元 |
 | violationDepositMoney   | 否 | double  | 违章押金 |  单位元 |
 | payType   | 是 | string  | 支付方式 |   balance 余额支付 / WX_MP 微信小程序支付 |
+| contractType   | 否 | int  | 合同类型 | 1 调车合同  2 租车合同  |
+| signType   | 否 | int  | 签署类型 | 0 个人签  2 企业签  |
 
 #####  错误说明
 
