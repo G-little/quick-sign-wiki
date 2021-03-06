@@ -112,6 +112,9 @@
 | depositType   | 否 | int  | 押金类型 |  0 无押金   1押金 |
 | carDepositMoney   | 否 | double  | 车辆押金 |  单位元 |
 | violationDepositMoney   | 否 | double  | 违章押金 |  单位元 |
+| contractType   | 否 | int  | 合同类型 | 1 调车合同  2 租车合同  |
+| signType   | 否 | int  | 签署类型 | 0 个人签  2 企业签  |
+
 
 
 #####  错误说明
@@ -160,6 +163,9 @@ pdf 文件流
 | carDepositMoney   | 否 | double  | 车辆押金 |  单位元 |
 | violationDepositMoney   | 否 | double  | 违章押金 |  单位元 |
 | payType   | 是 | string  | 支付方式 |   balance 余额支付 / WX_MP 微信小程序支付 |
+| contractType   | 否 | int  | 合同类型 | 1 调车合同  2 租车合同  |
+| signType   | 否 | int  | 签署类型 | 0 个人签  2 企业签  |
+
 
 
 #####  错误说明
@@ -386,6 +392,7 @@ URL参数:
 | 参数          |必选             | 类型       | 参数说明        | 备注          |
 |:-------------|:---------------:|:-------------|:-------------|:-------------|
 | id      | 是| int|  合同ID |  |
+| signType      | 是| int|  签署类型 | 0 个人签，2  企业签署 |
 
 
 
@@ -470,7 +477,14 @@ URL参数:
                 "payStatus": 1, //支付状态 0 初始 1 成功
                 "bindStatus": 1, //绑定状态 0 初始 1 成功
                 "addTime": null, //添加时间
+                "signType": 0, //签署类型 0 个人 2 企业
+                "contractType": 0, //合同类型 1 调车 2 租车
+                "partyAEntname": "xxxx", //企业名称
+                "partyBSignType": 0, //B签署类型 0 个人 2 企业
+                "partyBEntname": "xxxx", //B企业名称
+
                 "expireTime": null //失效时间
+                
             }
         ],
         "end": true,
