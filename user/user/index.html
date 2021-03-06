@@ -265,6 +265,14 @@
 <li><a href="#_86">接口说明</a></li>
 </ul>
 </li>
+<li><a href="#115">1.15 企业经办人实名认证</a><ul>
+<li><a href="#_87">接口说明</a></li>
+<li><a href="#_88">请求说明</a></li>
+<li><a href="#_89">输入参数</a></li>
+<li><a href="#_90">错误说明</a></li>
+<li><a href="#_91">返回实例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1298,7 +1306,42 @@
 <li>原手机号验证码认证 /user/mobile/update/step1</li>
 <li>新手机号验证码申请  /user/realname/update</li>
 <li>新手机号验证码认证  /user/mobile/update/step2</li>
-</ol></div>
+</ol>
+<h4 id="115">1.15 企业经办人实名认证</h4>
+<h5 id="_87">接口说明</h5>
+<p>调用步骤</p>
+<ol>
+<li>经办人实名认证 /user/ent/realname/step1</li>
+<li>经办人实名认证 /user/realname/step2</li>
+</ol>
+<h5 id="_88">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/user/ent/realname/step1</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_89">输入参数</h5>
+<p>无</p>
+<h5 id="_90">错误说明</h5>
+<h5 id="_91">返回实例</h5>
+<pre><code class="json">{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;flowId&quot;: &quot;1422815390941054682&quot; 
+    }
+}
+
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">

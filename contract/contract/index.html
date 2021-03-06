@@ -604,6 +604,20 @@
 <td align="left">违章押金</td>
 <td align="left">单位元</td>
 </tr>
+<tr>
+<td align="left">contractType</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">合同类型</td>
+<td align="left">1 调车合同  2 租车合同</td>
+</tr>
+<tr>
+<td align="left">signType</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">签署类型</td>
+<td align="left">0 个人签  2 企业签</td>
+</tr>
 </tbody>
 </table>
 <h5 id="_14">错误说明</h5>
@@ -764,6 +778,20 @@
 <td align="left">string</td>
 <td align="left">支付方式</td>
 <td align="left">balance 余额支付 / WX_MP 微信小程序支付</td>
+</tr>
+<tr>
+<td align="left">contractType</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">合同类型</td>
+<td align="left">1 调车合同  2 租车合同</td>
+</tr>
+<tr>
+<td align="left">signType</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">签署类型</td>
+<td align="left">0 个人签  2 企业签</td>
 </tr>
 </tbody>
 </table>
@@ -1037,6 +1065,13 @@
 <td align="left">合同ID</td>
 <td align="left"></td>
 </tr>
+<tr>
+<td align="left">signType</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">签署类型</td>
+<td align="left">0 个人签，2  企业签署</td>
+</tr>
 </tbody>
 </table>
 <h5 id="_44">错误说明</h5>
@@ -1138,7 +1173,14 @@
                 &quot;payStatus&quot;: 1, //支付状态 0 初始 1 成功
                 &quot;bindStatus&quot;: 1, //绑定状态 0 初始 1 成功
                 &quot;addTime&quot;: null, //添加时间
+                &quot;signType&quot;: 0, //签署类型 0 个人 2 企业
+                &quot;contractType&quot;: 0, //合同类型 1 调车 2 租车
+                &quot;partyAEntname&quot;: &quot;xxxx&quot;, //企业名称
+                &quot;partyBSignType&quot;: 0, //B签署类型 0 个人 2 企业
+                &quot;partyBEntname&quot;: &quot;xxxx&quot;, //B企业名称
+
                 &quot;expireTime&quot;: null //失效时间
+
             }
         ],
         &quot;end&quot;: true,
